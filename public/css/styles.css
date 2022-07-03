@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+body {
+  background-color: #d8a118;
+}
+
+img {
+  max-width: 110px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+
+.circle-container {
+  padding-left: 1em;
+}
+.circle {
+  background-color: #fff;
+  border-radius: 100px;
+  max-width: 200px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  transition: 0.5s;
+}
+
+.circle:hover {
+  transform: scale(1.07);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  border-bottom: 2px solid #fff;
+  align-items: center;
+  height: 120px;
+  background-color: #001745;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+}
+.list-container a {
+  padding-right: 1em;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.list-container a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: black;
+  margin: auto;
+  display: block;
+}
+
+.list-container a:hover::after {
+  width: 100%;
+  transition: width 0.5s linear;
+}
+.list-container a:hover {
+  color: #d8a118;
+  transform: scale(1.07);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 50px;
+  font-size: 36px;
+  color: #001745;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  height: 230px;
+  background-color: #001745;
+  overflow: hidden;
+}
+
+.form-controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: inherit;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: inherit;
+}
+
+input {
+  border-radius: 10px;
+  margin: 10px;
+  padding-left: 10px;
+}
+
+input:focus {
+  transform: scale(1.07);
+  border-color: #d8a118;
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+  color: #001745;
+  font-weight: bold;
+  background-color: #ead666;
+}
+
+span {
+  font-weight: bold;
+  color: white;
+}

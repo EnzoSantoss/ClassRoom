@@ -20,4 +20,17 @@ module.exports = class ClassroomController {
 
     res.redirect("/");
   }
+
+  static async singleStundent(req, res) {
+    const stundetID = req.params.id;
+
+    const student = await Stundet.findOne({
+      raw: true,
+      where: { id: stundetID },
+    });
+
+    console.log(student);
+
+    res.render("student", { student });
+  }
 };

@@ -24,6 +24,7 @@ app.use("/students", classroomRoutes);
 app.get("/", StudentController.showAllStudents);
 
 conn
+  // .sync({ force: true })
   .sync()
   .then(() => {
     app.listen(3000);

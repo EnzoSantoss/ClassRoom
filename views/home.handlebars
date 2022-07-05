@@ -1,1 +1,16 @@
-<h1>Aqui estão todos os estudantes!</h1>
+<h1 class="title"> Here we have all the students</h1>
+
+{{#each students}}
+
+  <div class="student-container">
+    <h2>Name: <a href="/students/student/{{this.id}}">{{this.name}}</a></h2>
+    <h2>E-mail: {{this.email}}</h2>
+
+    <div class="fucntions">
+      <a class="fucntions-btn" href="/">Deletar</a>
+      <a class="functions-btn" href="/">Editar</a>
+    </div>
+
+  </div>
+
+{{/each}}

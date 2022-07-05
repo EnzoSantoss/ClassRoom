@@ -48,28 +48,38 @@ img {
   display: flex;
   flex-direction: row;
   padding: 2em;
+  position: relative;
+  top: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
 }
 .list-container a {
-  padding-right: 1em;
+  padding-right: 0.5em;
+  margin-right: 2em;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  transition: 0.5s;
+  position: relative;
+  padding-bottom: 7px;
 }
-
 .list-container a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   content: "";
-  width: 0;
-  height: 4px;
+  width: 0%;
+  height: 2px;
   background-color: black;
-  margin: auto;
-  display: block;
+  transition: width 0.4s ease-out;
 }
 
 .list-container a:hover::after {
   width: 100%;
-  transition: width 0.5s linear;
 }
+
 .list-container a:hover {
   color: #d8a118;
   transform: scale(1.07);
@@ -145,4 +155,15 @@ button:hover {
 span {
   font-weight: bold;
   color: white;
+}
+
+.student-container {
+  background-color: #fff;
+  padding: 1em;
+  max-width: 500px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 20px;
 }

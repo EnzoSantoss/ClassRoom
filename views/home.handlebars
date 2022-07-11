@@ -7,8 +7,17 @@
     <h2>E-mail: {{this.email}}</h2>
 
     <div class="fucntions">
-      <a class="fucntions-btn" href="/">Deletar</a>
-      <a class="functions-btn" href="/">Editar</a>
+      <form action="/students/delete" method="post">
+        <input type="hidden" name="id" value="{{this.id}}" />
+        <div class="delete-btn">
+          <input type="submit" value="Deletar" />
+        </div>
+
+      </form>
+      <a
+        class="functions-btn"
+        href="/students/studentEdit/{{this.id}}"
+      >Editar</a>
     </div>
 
   </div>

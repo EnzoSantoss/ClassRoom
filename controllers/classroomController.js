@@ -29,8 +29,34 @@ module.exports = class ClassroomController {
       where: { id: stundetID },
     });
 
-    console.log(student);
-
     res.render("student", { student });
+  }
+
+  static async editStudent(req, res) {
+    const id = req.params.id;
+
+    const student = await Stundet.findOne({ where: { id: id }, raw: true });
+    res.render("formEdit", { student });
+  }
+
+  static async editStudentPost(req, res) {
+    const id = req.body.id;
+
+    const student = {
+      name: req.body.name,
+      email: req.body.email,
+    };
+
+    await Stundet.update(student, { where: { id: id } });
+
+    res.redirect("/");
+  }
+
+  static async deleteStudent(req, res) {
+    const id = req.body.id;
+
+    await Stundet.destroy({ where: { id: id } });
+
+    res.redirect("/");
   }
 };

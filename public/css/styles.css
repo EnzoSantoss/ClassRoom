@@ -167,3 +167,7 @@ span {
   padding-bottom: 1em;
   border-radius: 20px;
 }
+
+.delete-btn {
+  cursor: pointer;
+}
